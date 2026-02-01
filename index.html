@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>💗</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Sans+Arabic:wght@100..900&display=swap');
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: "Cairo", sans-serif;
+      background: #fff0f5;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    #evet {
+      background: #ff6f91;
+      color: white;
+      bottom: 100px;
+    }
+
+    #hayir {
+      background: #ccc;
+      color: black;
+    }
+
+    #surpriz {
+      display: none;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>بتحبيني؟ 💕</h1>
+
+  <button id="evet">أي 💕</button>
+  <button id="hayir">لاء 😒</button>
+
+  <div id="surpriz">
+    💖 يياااييي وانا بببححبببكككك 💖  
+    <br>
+    ييخخللليييللييي ييااككيييييي 🫶
+  </div>
+
+  <script>
+    const hayir = document.getElementById("hayir");
+
+    hayir.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - 300);
+      const y = Math.random() * (window.innerHeight - 300);
+
+      hayir.style.left = x + "px";
+      hayir.style.top = y + "px";
+    });
+
+    document.getElementById("evet").addEventListener("click", () => {
+      document.getElementById("surpriz").style.display = "block";
+      hayir.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
