@@ -48,11 +48,11 @@
   </style>
 </head>
 <body>
-
-  <h1>بتحبيني؟ 💕</h1>
-<br>
-  <button id="evet">أي 💕</button>
-  <button id="hayir">لاء 😒</button>
+<div style="display: block;"><h1>بتحبيني؟ 💕</h1></div>
+  
+<br><div style="display: flex; justify-content: center; gap: 20px;"><button id="evet">أي 💕</button>
+  <button id="hayir">لاء 😒</button></div>
+  
 
   <div id="surpriz">
     💖 يياااييي وانا بببححبببكككك 💖  
@@ -62,7 +62,7 @@
 
   <script>
     const hayir = document.getElementById("hayir");
-
+    
     hayir.addEventListener("mouseover", () => {
       const x = Math.random() * (window.innerWidth - 100);
       const y = Math.random() * (window.innerHeight - 100);
@@ -70,7 +70,7 @@
       hayir.style.left = x + "px";
       hayir.style.top = y + "px";
     });
-
+    
     document.getElementById("evet").addEventListener("click", () => {
       document.getElementById("surpriz").style.display = "block";
       hayir.style.display = "none";
@@ -79,4 +79,3 @@
 
 </body>
 </html>
-
